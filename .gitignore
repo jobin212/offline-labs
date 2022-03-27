@@ -2,3 +2,5 @@ test-photos/
 .env
 example-commands.txt
 .DS_Store
+offline-labs
+temp-images
