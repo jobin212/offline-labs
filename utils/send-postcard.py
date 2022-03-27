@@ -12,15 +12,20 @@ def main(args):
     front_photo = args[2]
     back_photo = args[3]
 
+    f_front = open(front_photo, 'rb')
+    f_back = open(back_photo, 'rb')
+
     postcard = lob.Postcard.create(
-        description = "test postcard1",
+        description = "test postcard",
         to_address = to_address_id,
         from_address = from_address_id,
-        front = front_photo,
-        back = back_photo
+        front = f_front,
+        back = f_back
     )
 
     print(postcard)
+    f_front.close()
+    f_back.close()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
