@@ -1,0 +1,4 @@
+test-photos/
+.env
+example-commands.txt
+.DS_Store
